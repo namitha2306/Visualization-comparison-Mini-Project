@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>COVID-19 Dashboard</title>
+</head>
+<body>
+    <h1>COVID-19 Dashboard</h1>
+    <button onclick="getCovidData()">Get COVID Data</button>
+    <button onclick="getVaccinationData()">Get Vaccination Data</button>
+
+    <div id="covidData"></div>
+    <div id="vaccinationData"></div>
+
+    <script>
+        function getCovidData() {
+            fetch('/api/get_covid_data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('covidData').innerHTML = JSON.stringify(data, null, 2);
+                });
+        }
+
+        function getVaccinationData() {
+            fetch('/api/get_vaccinations')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('vaccinationData').innerHTML = JSON.stringify(data, null, 2);
+                });
+        }
+    </script>
+</body>
+</html>
