@@ -1,0 +1,253 @@
+/* src/components/LandingPage.css */
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+  
+.landing-page {
+    background: #C9CCD3;
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: lighten;
+}
+
+.app-bar {
+    background-color: #282828; /* Dark background color similar to UKF */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center; /* Align items vertically */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+.app-title {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links button {
+    color: #fff;
+    text-transform: none;
+    font-weight: 600; /* Optional: Adjust font weight */
+}
+
+.main-title {
+    color: #000000;
+    font-weight: bold;
+}
+
+.sub-title {
+    color: #666;
+}
+
+.info-card {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.card-title {
+    color: #00796b;
+}
+
+.card-text {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.embed-title {
+    color: #00796b;
+    font-weight: bold;
+}
+
+.embed-text {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.dashboard-image {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #00796b;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px; /* Adjust height as needed */
+     /* Add spacing between logo and title */
+  }
+  
+  .app-title {
+    flex-grow: 1; /* Ensures the title takes up remaining space */
+  }
+  
+  .nav-links {
+    margin-left: 600px; /* Aligns navigation links to the right */
+  }
+  
+  /* src/components/LandingPage.css */
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+  
+.landing-page {
+    
+    background: #C9CCD3;
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: lighten;
+
+    color: #333;
+}
+.content-box {
+    background-color: rgba(121, 136, 151, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+.app-bar {
+    background-color: #282828; /* Dark background color similar to UKF */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center; /* Align items vertically */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+  }
+  
+  .logo-container {
+    margin-left: 1cm; /* Adjust the margin as needed */
+  }
+  
+  .logo {
+    max-width: 100px; /* Adjust the maximum width of the logo */
+  }
+  
+  .nav-links {
+    display: inline-flex;
+    gap: 20px;
+    flex: 1; /* Allow the nav-links to take up available space */
+  }
+  
+  .nav-left {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-right {
+    display: flex;
+    gap: 2px;
+    margin-left: auto; /* Push items to the right */
+  }
+  
+  .nav-links button {
+    color: #fff;
+    text-transform: none;
+    font-weight: 600; /* Optional: Adjust font weight */
+  }
+  
+.main-title {
+    color: #004d40;
+    font-weight: bold;
+}
+
+.sub-title {
+    color: #000000;
+}
+
+.info-card {
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    color: #00796b;
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    color: #666;
+    font-size: 0.8rem; /* Adjust font size */
+    margin-bottom: 10px;
+}
+
+.embed-title {
+    color: #00796b;
+    font-weight: bold;
+    font-size: 1rem; /* Adjust font size */
+    margin-bottom: 5px;
+}
+
+.embed-text {
+    color: #666;
+    font-size: 0.8rem; /* Adjust font size */
+    margin-bottom: 10px;
+}
+
+.dashboard-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #00796b;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px; /* Adjust height as needed */
+     /* Add spacing between logo and title */
+  }
+  
+  .app-title {
+    flex-grow: 1; /* Ensures the title takes up remaining space */
+  }
+  
+  .nav-links {
+    margin-left: 600px; /* Aligns navigation links to the right */
+  }
+  
+  .move-left {
+    margin-left: -1cm;
+}

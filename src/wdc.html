@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Data Connector</title>
+    <script src="https://connectors.tableau.com/libs/tableauwdc-2.4.latest.js"></script>
+</head>
+<body>
+    <h1>Web Data Connector</h1>
+
+    <button id="getDataButton">Get Data!</button>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            var myConnector = tableau.makeConnector();
+
+            myConnector.getSchema = function(schemaCallback) {
+                var cols = [
+                    { id: "Date", dataType: tableau.dataTypeEnum.string },
+                    { id: "Country", dataType: tableau.dataTypeEnum.string },
+                    { id: "State", dataType: tableau.dataTypeEnum.string },
+                    { id: "Confirmed", dataType: tableau.dataTypeEnum.int },
+                    { id: "Deaths", dataType: tableau.dataTypeEnum.int },
+                    { id: "Recovered", dataType: tableau.dataTypeEnum.int }
+                ];
+
+                var tableSchema = {
+                    id: "covidData",
+                    alias: "COVID Data",
+                    columns: cols
+                };
+
+                schemaCallback([tableSchema]);
+            };
+
+            myConnector.getData = function(table, doneCallback) {
+                fetch("/api/get_covid_data")
+                    .then(response => response.json())
+                    .then(data => {
+                        var tableData = [];
+                        data.forEach(function(record) {
+                            tableData.push({
+                                "Date": record.Date,
+                                "Country": record.Country,
+                                "State": record.State,
+                                "Confirmed": record.Confirmed,
+                                "Deaths": record.Deaths,
+                                "Recovered": record.Recovered
+                            });
+                        });
+
+                        table.appendRows(tableData);
+                        doneCallback();
+                    });
+            };
+
+            tableau.registerConnector(myConnector);
+
+            document.getElementById("getDataButton").addEventListener("click", function() {
+                tableau.connectionName = "COVID Data";
+                tableau.submit();
+            });
+        });
+    </script>
+</body>
+</html>
